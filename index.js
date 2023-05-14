@@ -50,7 +50,7 @@ search.addEventListener('click', (event) => {
       }
 
       const image = document.getElementById('weather_img');
-      image.src = json.current.condition.icon;
+      image.setAttribute("src", json.current.condition.icon);
       image.alt = json.current.condition.text;
       infoList.appendChild(image);
       
