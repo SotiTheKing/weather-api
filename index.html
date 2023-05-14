@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>Weather</title>
+</head>
+<body class="bg-gradient-to-r from-purple-300 to-blue-400 bg-no-repeat sm:h-full">
+    <div class="min-h-screen flex justify-center items-center">
+        <div class="bg-white rounded-lg p-8 shadow-md">
+            <h2 class="text-2xl font-bold mb-4">Weather</h2>
+            <form id="myButton" class="flex">
+                <input type="text" placeholder="City" id="cityInput" class="flex-grow px-4 py-2 rounded-l-md border border-gray-300 focus:outline-none focus:border-indigo-500" required>
+                <button type="submit" class="searchBar bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-r-md">Search</button>
+            </form><br>
+            <div class="grid grid-cols-2 gap-4">
+                <ul id="infoList" class="col-span-1 list-inside list-disc"></ul>
+                <img id="weather_img" class="col-span-1" src="">
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
