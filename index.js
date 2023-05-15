@@ -3,11 +3,13 @@ const formElement = document.getElementById('myButton');
 const searchButton = formElement.querySelector('.searchBar');
 const infoList = document.getElementById('infoList');
 
+require('dotenv').config();
+
 search.addEventListener('click', (event) => {
   event.preventDefault();
   resetInfoList();
 
-  const APIKey = 'b2bd4269c1ac468baf3170617230304';
+  const APIKey = process.env.APIKey;
   const city = document.querySelector('.flex-grow').value;
 
   // const cityInput = document.querySelector('.flex-grow');
@@ -50,7 +52,7 @@ search.addEventListener('click', (event) => {
       }
 
       const image = document.getElementById('weather_img');
-      image.setAttribute("src", json.current.condition.icon);
+      image.setAttribute("src", json.current.condition.icon); // this dont worky
       image.alt = json.current.condition.text;
       infoList.appendChild(image);
       
