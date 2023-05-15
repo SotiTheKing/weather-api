@@ -3,8 +3,6 @@ const formElement = document.getElementById('myButton');
 const searchButton = formElement.querySelector('.searchBar');
 const infoList = document.getElementById('infoList');
 
-require('dotenv').config();
-
 search.addEventListener('click', (event) => {
   event.preventDefault();
   resetInfoList();
@@ -26,7 +24,6 @@ search.addEventListener('click', (event) => {
   }
 
   // docs: https://www.weatherapi.com/docs/
-  // example: http://api.weatherapi.com/v1/current.json?key=b2bd4269c1ac468baf3170617230304&q=London&alerts=no
 
   fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}&alerts=no&tides=no`)
     .then(response => response.json())
