@@ -7,7 +7,7 @@ search.addEventListener('click', (event) => {
   event.preventDefault();
   resetInfoList();
 
-  const APIKey = process.env.APIKey;
+  const APIKey = '9c7726e1a983414191a140225231505';
   const city = document.querySelector('.flex-grow').value;
 
   // const cityInput = document.querySelector('.flex-grow');
